@@ -1,4 +1,3 @@
-import Demo from "./RedisDemo";
 import {faker} from "@faker-js/faker"
 import { computeDestinationPoint } from 'geolib';
 import DemoInterface from "./DemoInterface";
@@ -7,7 +6,7 @@ const MAX_LATITUDE = 85.05112878
 const MAX_LONGITUDE = 180
 
 class Simulator {
-    private demo: Demo;
+    private demo: DemoInterface;
     private longitude: number;
     private latitude: number
     constructor(demo: DemoInterface) {
@@ -59,7 +58,7 @@ class Simulator {
         return await this.demo.getNearestDriver(latitude, longitude)
     }
     public run() {
-        const NUM_DRIVERS = 100;
+        const NUM_DRIVERS = 1000;
         for (let i = 0; i < NUM_DRIVERS; i++) {
             this.simulateDriver()
         }
