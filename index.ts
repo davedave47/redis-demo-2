@@ -2,6 +2,7 @@ import Simulator from "./Simulator"
 import express, {Request, Response} from "express"
 import cookieParser from "cookie-parser"
 import RedisDemo from "./RedisDemo"
+import PostGISDemo from "./PostGisDemo"
 const PORT = 3000
 
 const app = express()
@@ -29,7 +30,7 @@ app.get("/nearest", async (req: Request, res: Response): Promise<any> => {
     const driver = await simulator.getNearestDriver(parseFloat(latitude.toString()), parseFloat(longitude.toString()))
     const time = Date.now() - startTime
     return res.status(200).json({
-        time,
+        time: `${time} ms`,
         ...driver
     })
 })
