@@ -1,0 +1,30 @@
+{
+  "name": "redis-demo_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.2.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "geolib": "^3.3.4",
+    "pg": "^8.13.1",
+    "pg-pool": "^3.7.0",
+    "redis": "^4.7.0",
+    "uuid": "^11.0.2"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10"
+  }
+}
