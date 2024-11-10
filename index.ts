@@ -6,8 +6,8 @@ import PostGISDemo from "./PostGisDemo"
 const PORT = 3000
 
 const app = express()
-// const simulator = new Simulator(new RedisDemo()) //Use redis
-const simulator = new Simulator(new PostGISDemo()) //Use postgis
+const simulator = new Simulator(new RedisDemo()) //Use redis
+// const simulator = new Simulator(new PostGISDemo()) //Use postgis
 
 simulator.run()
 
