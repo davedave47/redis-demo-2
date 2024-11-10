@@ -10,7 +10,7 @@ const pool = new Pool({
 
 pool.connect().then(() => {
     console.log("Connected to Postgres")
-    pool.query("TRUNCATE TABLE driver;")
+    pool.query("TRUNCATE TABLE geo.driver;")
     }
 )
 export default pool;
