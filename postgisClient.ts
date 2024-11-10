@@ -8,6 +8,9 @@ const pool = new Pool({
     port: 5432
 });
 
-pool.connect()
-
+pool.connect().then(() => {
+    console.log("Connected to Postgres")
+    pool.query("TRUNCATE TABLE driver;")
+    }
+)
 export default pool;
